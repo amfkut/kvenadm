@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Завод крабовых палочек</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.1/mapbox-gl.css" rel="stylesheet" />
+</head>
+<body>
+
+<header class="main-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/new_logo.svg" alt="Акционерное общество «КВЭН»">
+      </a>
+    </div>
+    <div class="header-title">
+      АКЦИОНЕРНОЕ ОБЩЕСТВО «КВЭН»
+    </div>
+    <div class="header-contacts">
+      📞 +7 (4236) XXX-XX-XX<br>
+      📧 info@kven.ru
+    </div>
+  </div>
+</header>
+
+<nav>
+  <a href="index.html">Главная</a>
+  <a href="products.html">Продукция</a>
+  <a href="about.html">О компании</a>
+  <a href="contacts.html">Контакты</a>
+  <a href="vacancies.html">Вакансии</a>
+</nav>
+
+<!-- Баннер с изображением  -->
+<div class="hero-banner">
+  <img src="images/new_main_bg.jpg" alt="Завод “КВЭН” ">
+</div>
+
+<!-- Единый блок: "Компания в цифрах" + статистика -->
+<section class="company-section">
+  <div class="container">
+    <h2>Компания <span class="red-text">в цифрах</span></h2>
+    <div class="company-desc">
+      <p>Мы являемся единственным производителем продукции из сурими на Дальнем Востоке. Основа ассортимента — крабовые палочки, снежный и супер снежный краб под торговыми марками «КВЭН» и «TOKIMO».</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number" data-value="15">0</div>
+        <div class="stat-bold">Наименований</div>
+        <div class="stat-light">рыбной продукции</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-value="1600">0</div>
+        <div class="stat-bold">Тонн продукции в год</div>
+        <div class="stat-light">мощность комбината</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-value="3" data-format="thousand-step">0</div>
+        <div class="stat-bold">Квадратных метров</div>
+        <div class="stat-light">заводская территория</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" data-value="2400">0</div>
+        <div class="stat-bold">Магазинов</div>
+        <div class="stat-light">продают наш ассортимент</div>
+      </div>
+    </div>
+
+    <!-- Тонкая линия в самом низу секции -->
+    <div class="section-divider"></div>
+  </div>
+</section>
+
+<!-- Блок "Как мы работаем" -->
+<section class="how-we-work">
+  <div class="container">
+    <div class="work-content">
+      <div class="work-image">
+        <img src="images/beach_crab_new.jpg" alt="Краб — символ качества продукции завода КВЭН">
+      </div>
+      <div class="work-text">
+        <h2>Как мы <span class="red-text">работаем</span></h2>
+        <p>Завод располагает мощной производственной базой, которая позволяет производить до 500 тонн готовой продукции в месяц. Высокое качество продукции, выпускаемой заводом «КВЭН», соответствует мировым стандартам и подтверждено сертификатом качества ИСО 9001–2000.</p>
+        <p>Для контроля качества сырья и готовой продукции на предприятии имеется собственная аккредитованная лаборатория, которая проводит испытания сырья и готовой продукции по физико-химическим, микробиологическим показателям, санитарно-гигиенический контроль производства в соответствии с требованиями действующей нормативной документации.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Блок "Наши ценности" -->
+<section class="values-section">
+  <div class="container">
+    <h1>Наши ценности</h1>
+    <p class="values-desc">
+      Основы нашей корпоративной культуры, разделяемые сотрудниками<br>
+      и закреплённые в стандартах и правилах поведения.
+    </p>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-number">01</div>
+        <div class="value-icon icon-1"></div>
+        <div class="value-text">Возможность<br>самореализации<br>сотрудников</div>
+      </div>
+      <div class="value-card">
+        <div class="value-number">02</div>
+        <div class="value-icon icon-2"></div>
+        <div class="value-text">Постоянное стремление к развитию и инновациям</div>
+      </div>
+      <div class="value-card">
+        <div class="value-number">03</div>
+        <div class="value-icon icon-3"></div>
+        <div class="value-text">Взаимная ответственность и доверие</div>
+      </div>
+      <div class="value-card">
+        <div class="value-number">04</div>
+        <div class="value-icon icon-4"></div>
+        <div class="value-text">Командный дух</div>
+      </div>
+      <div class="value-card">
+        <div class="value-number">05</div>
+        <div class="value-icon icon-5"></div>
+        <div class="value-text">Амбициозность и лидерство</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Блок "Последние события" -->
+<section class="last-events">
+  <div class="container">
+    <h1>Последние события</h1>
+    <p class="events-desc">
+      Здесь мы публикуем новости компании, анонсы и другой материал.<br>
+      Следите, чтобы не пропустить что-нибудь интересное.
+    </p>
+
+    <div class="events-carousel">
+      <!-- Элемент 1: упаковочная линия -->
+      <div class="event-card">
+        <div class="event-image">
+          <img src="images/thumb_202_800_0_0_0_auto.jpg" alt="На заводе КВЭН установлена новая упаковочная линия">
+        </div>
+        <p class="event-caption">
+          На заводе "КВЭН" в Находке установлена новая упаковочная линия<br>
+          <a href="https://primamedia.ru/news/1577951/?from=7" target="_blank" class="event-link">Подробнее</a>
+        </p>
+      </div>
+
+      <!-- Элемент 2: фотозона -->
+      <div class="event-card">
+        <div class="event-image">
+          <img src="images/thumb_201_800_0_0_0_auto.jpg" alt="Огромная фотозона от КВЭН на празднике">
+        </div>
+        <p class="event-caption">
+          Огромную фотозону в виде громадного обитателя морского дна для гостей праздника организовала компания "КВЭН"<br>
+          <a href="https://primamedia.ru/news/1540568/" target="_blank" class="event-link">Подробнее</a>
+        </p>
+      </div>
+
+      <!-- Элемент 3: краб на набережной -->
+      <div class="event-card">
+        <div class="event-image">
+          <img src="images/thumb_199_800_0_0_0_auto.jpg" alt="Огромный краб от КВЭН на Дне города Владивостока">
+        </div>
+        <p class="event-caption">
+          В День города Владивостока на набережной появился огромный краб от «КВЭН»<br>
+          <a href="https://primamedia.ru/news/1577951/?from=7" target="_blank" class="event-link">Подробнее</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Блок "Фирменные отделы" -->
+<section class="outlets-section">
+  <div class="container">
+    <h1>Фирменные отделы</h1>
+    <p class="outlets-desc">
+      Воспользуйтесь картой, чтобы найти свой населённый пункт, проложить маршрут<br>
+      и найти всю актуальную контактную информацию.
+    </p>
+  </div>
+
+  <div id="outlets-map-container">
+    <div id="sidebar">
+      <h2>📍 Фирменные отделы</h2>
+      <div id="places-list"></div>
+    </div>
+    <div id="map"></div>
+  </div>
+</section>
+
+<main>
+  <h2>Добро пожаловать на наш завод!</h2>
+  <p>Мы производим высококачественные крабовые палочки уже более 15 лет. Наша продукция — это сочетание традиций и современных технологий.</p>
+
+  <div class="ad-banner">
+    <h3>🔥 Специальное предложение!</h3>
+    <p>При заказе от 100 кг — бесплатная доставка по всему региону!</p>
+    <a href="contacts.html" class="btn">Связаться с нами</a>
+  </div>
+
+  <div class="ad-banner">
+    <h3>🌊 Вкус моря в каждом продукте</h3>
+    <p>Наша продукция изготавливается из отборного рыбного фарша и натуральных ингредиентов без ГМО.</p>
+  </div>
+</main>
+
+<!-- Футер -->
+<footer class="main-footer">
+  <div class="footer-grid-wrapper">
+    <div class="footer-grid">
+      <div class="footer-col logo-col">
+        <a href="index.html">
+          <img src="images/new_logo.svg" alt="Завод КВЭН">
+        </a>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="products.html">Крабовые палочки</a></li>
+          <li><a href="products.html">Снежный краб</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="vacancies.html">Вакансии</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-address">
+        <a href="https://yandex.ru/maps/75/vladivostok/house/prospekt_100_letiya_vladivostoka_155k1/ZUoHaA5hTk0AVEJuYGJwdnRhZg8=/?ll=131.917878%2C43.178228&utm_source=share&z=16" target="_blank" rel="noopener">
+          Владивосток,<br>
+          пр. 100-летия Владивостока, 155 к1, 1 этаж
+        </a><br>
+        Головной офис · ПН-ПТ, 9:00–18:00
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    © АО «КВЭН». Все права сохранены.
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

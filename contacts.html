@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакты — Завод крабовых палочек “КВЭН”</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.1/mapbox-gl.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Хедер -->
+<header class="main-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/new_logo.svg" alt="Акционерное общество «КВЭН»">
+      </a>
+    </div>
+    <div class="header-title">
+      КОНТАКТНАЯ ИНФОРМАЦИЯ
+    </div>
+    <div class="header-contact">
+      📞 +7 (4236) XXX-XX-XX<br>
+      📧 info@kven.ru
+    </div>
+  </div>
+</header>
+
+<!-- Навигация -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="index.html">Главная</a>
+    <a href="products.html">Продукция</a>
+    <a href="about.html">О компании</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="vacancies.html">Вакансии</a>
+  </div>
+</nav>
+
+<!-- Основной контент -->
+<main class="container">
+  <div class="page-header">
+    <h1>Контакты</h1>
+    <p class="outlets-desc">
+      Воспользуйтесь картой, чтобы найти свой населённый пункт, проложить<br>
+      маршрут и найти всю актуальную контактную информацию.
+    </p>
+  </div>
+
+  <div class="contact-offices">
+    <div class="office-block">
+      <h2>Завод АО «КВЭН»</h2>
+      <p>
+        <strong>адрес</strong><br>
+        <a href="https://yandex.ru/maps/974/nahodka/?ll=132.841795%2C42.779975&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=132.841795%2C42.779975&whatshere%5Bzoom%5D=17&z=17" target="_blank" rel="noopener" class="contact-link">
+          Находка, Ленинградская, 13В
+        </a><br><br>
+        <strong>номер телефона</strong><br>
+        +7 (4236) 62-56-22<br><br>
+        <strong>электронная почта</strong><br>
+        <a href="mailto:office@kven.ru" class="contact-link">office@kven.ru</a>
+      </p>
+    </div>
+
+    <div class="office-block">
+      <h2>Офис ООО «РодСтор Групп»</h2>
+      <p>
+        <strong>адрес</strong><br>
+        <a href="https://yandex.ru/maps/75/vladivostok/house/prospekt_100_letiya_vladivostoka_155k1/ZUoHaA5hTk0AVEJuYGJwdnRhZg8=/?ll=131.917878%2C43.178228&utm_source=share&z=16" target="_blank" rel="noopener" class="contact-link">
+          Владивосток, проспект 100-летия Владивостока, 155к1
+        </a><br><br>
+        <strong>номер телефона</strong><br>
+        8 (423) 2–609–603 · Доб. #6050, #6189<br><br>
+        <strong>электронная почта</strong><br>
+        <a href="mailto:secretariat_rsg@rodstorgroup.ru" class="contact-link">secretariat_rsg@rodstorgroup.ru</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Форма -->
+  <div class="contact-info">
+    <p>
+      <strong>АО “КВЭН”</strong><br>
+      Адрес: <a href="https://yandex.ru/maps/974/nahodka/?ll=132.841795%2C42.779975&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=132.841795%2C42.779975&whatshere%5Bzoom%5D=17&z=17" target="_blank" rel="noopener" class="contact-link">692900, Приморский край, г. Находка, ул. 3-я Промышленная, д. 3</a><br>
+      Телефон: +7 (4236) XXX-XX-XX<br>
+      Email: <a href="mailto:info@kven.ru" class="contact-link">info@kven.ru</a>
+    </p>
+
+    <h2>Отправить сообщение</h2>
+    <form id="contact-form" class="form-container">
+      <div class="form-group">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn">Отправить</button>
+    </form>
+  </div>
+</main>
+
+<!-- Карта офисов -->
+<section class="outlets-section">
+  <div class="container">
+    <h2>Наши офисы</h2>
+  </div>
+  <div id="outlets-map-container">
+    <div id="sidebar">
+      <h2>📍 Наши офисы</h2>
+      <div id="places-list"></div>
+    </div>
+    <div id="map"></div>
+  </div>
+</section>
+
+<!-- Футер -->
+<footer class="main-footer">
+  <div class="footer-grid-wrapper">
+    <div class="footer-grid">
+      <div class="footer-col logo-col">
+        <a href="index.html">
+          <img src="images/new_logo.svg" alt="Завод КВЭН">
+        </a>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="products.html">Крабовые палочки</a></li>
+          <li><a href="products.html">Снежный краб</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="vacancies.html">Вакансии</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-address">
+        <a href="https://yandex.ru/maps/75/vladivostok/house/prospekt_100_letiya_vladivostoka_155k1/ZUoHaA5hTk0AVEJuYGJwdnRhZg8=/?ll=131.917878%2C43.178228&utm_source=share&z=16" target="_blank" rel="noopener">
+          Владивосток,<br>
+          пр. 100-летия Владивостока, 155 к1, 1 этаж
+        </a><br>
+        Головной офис · ПН-ПТ, 9:00–18:00
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    © АО «КВЭН». Все права сохранены.
+  </div>
+</footer>
+
+<script>
+// Обработка формы
+document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Спасибо! Ваше сообщение отправлено.');
+  this.reset();
+});
+
+// Карта
+if (document.getElementById('map')) {
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleGt1dCIsImEiOiJjbWd4cWxpbmYxMmtyMm5xa2x0d3A0bjRwIn0.fxaR7hsYJl1TBMkZvu-UtQ';
+
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [133.0, 47.0],
+    zoom: 4
+  });
+
+  const offices = [
+    { name: 'Офис в Находке', address: 'г. Находка, ул. 3-я Промышленная, д. 3', phone: '+7 (4236) 745 593', coords: [132.8650, 42.8250] },
+    { name: 'Офис во Владивостоке', address: 'г. Владивосток, ул. Снеговая, д. 34', phone: '+7 (423) 2 609 603 · доб. 6050, 6189', coords: [131.9179, 43.1782] },
+    { name: 'Офис в Уссурийске', address: 'г. Уссурийск, ул. Механизаторов, д. 8а', phone: '+7 (4234) 342 675', coords: [131.9560, 43.8060] },
+    { name: 'Офис в Хабаровске', address: 'г. Хабаровск, ул. Суворова, д. 80', phone: '+7 (4212) 525 704', coords: [135.0750, 48.4820] },
+    { name: 'Офис в Комсомольске-на-Амуре', address: 'Комсомольск-на-Амуре, ул. Радищева, 2', phone: '8 (4217) 22-15-90', coords: [137.0300, 48.5195] },
+    { name: 'Офис в Южно-Сахалинске', address: 'г. Южно-Сахалинск, ул. Украинская, 68/20', phone: '+7 (4242) 510-291', coords: [142.7380, 46.9490] }
+  ];
+
+  const listContainer = document.getElementById('places-list');
+
+  offices.forEach(place => {
+    const yandexLink = `https://yandex.ru/maps/?rtext=~${place.coords[1]},${place.coords[0]}&rtt=auto`;
+    const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(`
+      <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 250px;">
+        <h3 style="margin: 0 0 8px; color: #e63946; font-size: 16px;">${place.name}</h3>
+        <p style="margin: 0 0 6px; font-size: 14px;">${place.address}</p>
+        <p style="margin: 0 0 8px; font-size: 14px;">${place.phone}</p>
+        <a href="${yandexLink}" target="_blank" style="display: inline-block; padding: 4px 8px; font-size: 13px; color: #e63946; border: 1px solid #e63946; border-radius: 4px; text-decoration: none;">Маршрут</a>
+      </div>
+    `);
+
+    const marker = new mapboxgl.Marker({ color: '#e63946' })
+      .setLngLat(place.coords)
+      .setPopup(popup)
+      .addTo(map);
+
+    const item = document.createElement('div');
+    item.className = 'place';
+    item.innerHTML = `
+      <h3>${place.name}</h3>
+      <p>${place.address}</p>
+      <p>${place.phone}</p>
+      <a href="${yandexLink}" target="_blank" class="place-btn">Маршрут</a>
+    `;
+    listContainer.appendChild(item);
+
+    item.addEventListener('click', () => {
+      document.querySelectorAll('.place').forEach(el => el.classList.remove('active'));
+      item.classList.add('active');
+      map.flyTo({ center: place.coords, zoom: 13 });
+      popup.addTo(map);
+    });
+  });
+
+  if (offices.length > 0) {
+    const bounds = new mapboxgl.LngLatBounds();
+    offices.forEach(p => bounds.extend(p.coords));
+    map.fitBounds(bounds, { padding: { top: 80, bottom: 80, left: 320, right: 40 }, linear: true });
+  }
+}
+</script>
+
+</body>
+</html>

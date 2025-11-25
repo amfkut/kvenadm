@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Продукция — Завод крабовых палочек “КВЭН”</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      margin: 6px 0;
+    }
+    .sidebar a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .sidebar a.active {
+      background-color: #DA291C;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Хедер с логотипом -->
+<header class="main-header">
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/new_logo.svg" alt="Акционерное общество «КВЭН»">
+      </a>
+    </div>
+    <div class="header-title">
+      КАТАЛОГ ПРОДУКЦИИ
+    </div>
+    <div class="header-contact">
+      📞 +7 (4236) XXX-XX-XX<br>
+      📧 info@kven.ru
+    </div>
+  </div>
+</header>
+
+<!-- Обновлённое меню -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="index.html">Главная</a>
+    <a href="products.html">Продукция</a>
+    <a href="about.html">О компании</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="vacancies.html">Вакансии</a>
+  </div>
+</nav>
+
+<!-- Основной контент -->
+<div class="page-wrapper">
+  <!-- Левый сайдбар -->
+  <aside class="sidebar">
+    <div class="sidebar-block">
+      <h3>Производители</h3>
+      <ul class="filter-list">
+        <li><a href="#" data-category="kven">КВЭН</a></li>
+        <li><a href="#" data-category="tokimo">TOKIMO</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <h3>Тип продукции</h3>
+      <ul class="filter-list">
+        <li><a href="#" data-category="all">Все товары</a></li>
+        <li><a href="#" data-category="crab-sticks">Крабовые палочки</a></li>
+        <li><a href="#" data-category="snow-crab">Снежный краб</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <h3>Фильтры</h3>
+      <ul class="filter-list">
+        <li><a href="#" data-category="all">Все</a></li>
+        <li><a href="#" data-category="bestseller">Хиты продаж</a></li>
+        <li><a href="#" data-category="new">Новинки</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Сетка товаров -->
+  <main class="products-main">
+    <!-- 1. TOKIMO: Крабовые палочки -->
+    <div class="product-card" data-category="tokimo crab-sticks">
+      <a href="products/crab_sticks.html">
+        <img src="products/images/tokimo_crab_stiks_.jpg" alt="Крабовые палочки TOKIMO">
+        <div class="title-main">КРАБОВЫЕ ПАЛОЧКИ</div>
+        <div class="title-sub">Крабовые палочки</div>
+      </a>
+    </div>
+
+    <!-- 2. КВЭН: Крабовые палочки с мясом краба — хит -->
+    <div class="product-card" data-category="kven crab-sticks bestseller">
+      <a href="products/crab_sticks_meat.html">
+        <img src="products/images/kven_sticks_meat.jpg" alt="Крабовые палочки с мясом краба">
+        <div class="title-main">КРАБОВЫЕ ПАЛОЧКИ С МЯСОМ КРАБА</div>
+        <div class="title-sub">Крабовые палочки</div>
+      </a>
+    </div>
+
+    <!-- 3. КВЭН: Охлаждённые крабовые палочки -->
+    <div class="product-card" data-category="kven crab-sticks">
+      <a href="products/crab_sticks_meat_cool.html">
+        <img src="products/images/kven_sticks_meat_cool.jpg" alt="Охлаждённые крабовые палочки с мясом краба">
+        <div class="title-main">КРАБОВЫЕ ПАЛОЧКИ С МЯСОМ КРАБА ОХЛАЖДЕННЫЕ</div>
+        <div class="title-sub">Крабовые палочки</div>
+      </a>
+    </div>
+
+    <!-- 4. КВЭН: Снежный краб охлаждённый -->
+    <div class="product-card" data-category="kven snow-crab">
+      <a href="products/snow_crab_cool.html">
+        <img src="products/images/kven_snow_crab_cool.jpg" alt="Охлаждённый снежный краб">
+        <div class="title-main">СНЕЖНЫЙ КРАБ ОХЛАЖДЕННЫЙ</div>
+        <div class="title-sub">Снежный краб</div>
+      </a>
+    </div>
+
+    <!-- 5. TOKIMO: Снежный краб -->
+    <div class="product-card" data-category="tokimo snow-crab">
+      <a href="products/snow_crab.html">
+        <img src="products/images/tokimo_snow_crab_.jpg" alt="Снежный краб TOKIMO">
+        <div class="title-main">СНЕЖНЫЙ КРАБ</div>
+        <div class="title-sub">Снежный краб</div>
+      </a>
+    </div>
+
+    <!-- 6. TOKIMO: Супер снежный краб -->
+    <div class="product-card" data-category="tokimo snow-crab">
+      <a href="products/super_snow_crab.html">
+        <img src="products/images/tokimo_super_snow_crab_.jpg" alt="Супер снежный краб TOKIMO">
+        <div class="title-main">СУПЕР СНЕЖНЫЙ КРАБ</div>
+        <div class="title-sub">Снежный краб</div>
+      </a>
+    </div>
+  </main>
+</div>
+
+<!-- Футер -->
+<footer class="main-footer">
+  <div class="footer-grid-wrapper">
+    <div class="footer-grid">
+      <div class="footer-col logo-col">
+        <a href="index.html">
+          <img src="images/new_logo.svg" alt="Завод КВЭН">
+        </a>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="products.html">Крабовые палочки</a></li>
+          <li><a href="products.html">Снежный краб</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul class="footer-links">
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="vacancies.html">Вакансии</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-address">
+        <a href="https://yandex.ru/maps/75/vladivostok/house/prospekt_100_letiya_vladivostoka_155k1/ZUoHaA5hTk0AVEJuYGJwdnRhZg8=/?ll=131.917878%2C43.178228&utm_source=share&z=16" target="_blank" rel="noopener">
+          Владивосток,<br>
+          пр. 100-летия Владивостока, 155 к1, 1 этаж
+        </a><br>
+        Головной офис · ПН-ПТ, 9:00–18:00
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    © АО «КВЭН». Все права сохранены.
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const filterLinks = document.querySelectorAll('.sidebar a[data-category]');
+    const productCards = document.querySelectorAll('.product-card');
+
+    function filterProducts(selectedCategory) {
+      productCards.forEach(card => {
+        const categories = card.dataset.category.split(' ');
+        if (selectedCategory === 'all' || categories.includes(selectedCategory)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    filterLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        filterLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        filterProducts(this.dataset.category);
+      });
+    });
+
+    // Активируем "Все товары" при загрузке
+    const allLink = document.querySelector('.sidebar a[data-category="all"]');
+    if (allLink) {
+      allLink.classList.add('active');
+      filterProducts('all');
+    }
+  });
+</script>
+
+</body>
+</html>
