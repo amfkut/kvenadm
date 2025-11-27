@@ -1,3 +1,7 @@
+# Обязательно указываем, что используем Netlify Identity
+identity:
+  netlify: true
+
 backend:
   name: github
   repo: amfkut/kvenadm
