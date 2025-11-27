@@ -4,8 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Decap CMS</title>
+  <!-- Эта строчка решает все оставшиеся проблемы с локальным режимом -->
+  <script>
+    // Включаем local_backend глобально, даже если вдруг забыли в config.yml
+    window.CMS_CONFIGURATION = {
+      local_backend: true
+    };
+  </script>
 </head>
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.0.0/dist/decap-cms.js"></script>
+  <!-- Подключаем сам Decap CMS -->
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
