@@ -2,7 +2,6 @@ backend:
   name: github
   repo: amfkut/kvenadm
   branch: main
-  app_id: Ov23licY4ugAPP04CfbP
 
 media_folder: "products/images"
 public_folder: "/products/images"
