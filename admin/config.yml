@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ваш-логин/kven
+  repo: amfkut/kvenadm
   branch: main
 
 media_folder: "products/images"
