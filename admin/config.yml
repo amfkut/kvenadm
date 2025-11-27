@@ -1,4 +1,3 @@
-# Static CMS — работает на GitHub Pages без прокси и Netlify
 backend:
   name: github
   repo: amfkut/kvenadm
