@@ -8,8 +8,8 @@
     "Температура хранения": "от -18°С",
     "Срок годности": "6 месяцев"
   },
-  "image": "/products/images/tokimo_snow_crab_.jpg",
+  "image": "../products/images/tokimo_snow_crab_.jpg",
   "buy_text": "Помимо розничных магазинов в вашем населённом пункте, вы можете приобрести нашу продукцию через <strong>Сбермаркет</strong>.",
   "buy_link": "https://kuper.ru/?utm_referrer=https%3a%2f%2fkven.ru%2f",
-  "buy_img": "/products/images/sber_guy.webp"
+  "buy_img": "../products/images/sber_guy.webp"
 }
