@@ -130,51 +130,51 @@
   </div>
 </nav>
 
-<main class="product-detail">
-  <div class="product-image">
-    <img src="images/tokimo_snow_crab_.jpg" alt="Снежный краб TOKIMO">
-  </div>
-  <div class="product-info">
-    <h1>Снежный краб</h1>
-    <p>Низкокалорийный продукт, в основном состоящий из рыбного белка. Подходит для приготовления множества вкуснейших блюд: салатов, супов, роллов. Изготавливается на японской технологической линии. «Снежный краб» отличается от «Супер снежного» тем, что сегменты продукта после нарезки запаиваются в индивидуальную оболочку, а потом сформированные палочки упаковываются в пачку. Палочки имеют характерную для краба волокнистую структуру.</p>
-
-    <div class="spec-section">
-      <h2>Состав</h2>
-      <p>Сурими, яичный порошок, растительное масло, ароматизатор натуральный крабовый, красители (кармин, маслосмолы паприки).</p>
-    </div>
-
-    <div class="spec-section">
-      <h2>Вес</h2>
-      <p>0.160 кг</p>
-    </div>
-
-    <div class="spec-section">
-      <h2>Упаковка</h2>
-      <p>Вакуум</p>
-    </div>
-
-    <div class="spec-section">
-      <h2>Температура хранения</h2>
-      <p>от -18°С</p>
-    </div>
-
-    <div class="spec-section">
-      <h2>Срок годности</h2>
-      <p>6 месяцев</p>
-    </div>
-
-    <div class="where-to-buy">
-      <div class="where-to-buy-text">
-        <h2>Где купить?</h2>
-        <p>Помимо розничных магазинов в вашем населённом пункте, вы можете приобрести нашу продукцию через <strong>Сбермаркет</strong>.</p>
-        <a href="https://kuper.ru/?utm_referrer=https%3a%2f%2fkven.ru%2f" target="_blank" rel="noopener" class="button">Сбермаркет</a>
-      </div>
-      <div class="where-to-buy-img">
-        <img src="images/sber_guy.webp" alt="Сбермаркет — доставка продуктов">
-      </div>
-    </div>
-  </div>
+<main class="product-detail" id="product-content">
+  <!-- Контент будет загружен из snow_crab.json -->
 </main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      const response = await fetch('snow_crab.json');
+      const data = await response.json();
+
+      const html = `
+        <div class="product-image">
+          <img src="${data.image}" alt="Снежный краб TOKIMO">
+        </div>
+        <div class="product-info">
+          <h1>${data.title}</h1>
+          <p>${data.description}</p>
+
+          ${Object.entries(data.specs).map(([key, value]) => `
+            <div class="spec-section">
+              <h2>${key}</h2>
+              <p>${value}</p>
+            </div>
+          `).join('')}
+
+          <div class="where-to-buy">
+            <div class="where-to-buy-text">
+              <h2>Где купить?</h2>
+              <p>${data.buy_text}</p>
+              <a href="${data.buy_link}" target="_blank" rel="noopener" class="button">Сбермаркет</a>
+            </div>
+            <div class="where-to-buy-img">
+              <img src="${data.buy_img}" alt="Сбермаркет — доставка продуктов">
+            </div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('product-content').innerHTML = html;
+    } catch (e) {
+      console.error('Ошибка загрузки данных продукта:', e);
+      document.getElementById('product-content').innerHTML = '<p>Ошибка загрузки данных.</p>';
+    }
+  });
+</script>
 
 <!-- Футер (для файлов внутри папки products/) -->
 <footer class="main-footer">
@@ -213,4 +213,5 @@
 </footer>
 
 </body>
+
 </html>
