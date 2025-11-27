@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Static CMS — Редактирование продукции</title>
-  <style>
-    body { margin:0; font-family: system-ui, sans-serif; background:#f7fafc; }
-  </style>
+  <title>Static CMS</title>
 </head>
 <body>
-  <!-- Это единственное, что нужно поменять — подключаем Static CMS вместо Decap -->
+  <!-- Эта строчка заставляет Static CMS стартовать даже при проблемах с путями -->
+  <script type="text/javascript">
+    window.STATIC_CMS = true;
+  </script>
   <script src="https://unpkg.com/static-cms@^3/dist/static-cms.js"></script>
 </body>
 </html>
