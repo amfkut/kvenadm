@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ваш-логин/kven  # ← замените на ваш GitHub username и репозиторий
+  repo: ваш-логин/kven
   branch: main
 
 media_folder: "products/images"
@@ -14,16 +14,40 @@ collections:
         label: "Снежный краб"
         file: "data/products/snow_crab.json"
         fields:
-          - { label: "Заголовок", name: "title", widget: "string" }
-          - { label: "Описание", name: "description", widget: "text" }
-          - { label: "Изображение продукта", name: "image", widget: "image" }
-          - { label: "Спецификации", name: "specs", widget: "object", fields:
-              - { label: "Состав", name: "Состав", widget: "text" }
-              - { label: "Вес", name: "Вес", widget: "string" }
-              - { label: "Упаковка", name: "Упаковка", widget: "string" }
-              - { label: "Температура хранения", name: "Температура хранения", widget: "string" }
-              - { label: "Срок годности", name: "Срок годности", widget: "string" }
-            }
-          - { label: "Текст 'Где купить'", name: "buy_text", widget: "markdown" }
-          - { label: "Ссылка покупки", name: "buy_link", widget: "string" }
-          - { label: "Изображение 'Где купить'", name: "buy_img", widget: "image" }
+          - label: "Заголовок"
+            name: "title"
+            widget: "string"
+          - label: "Описание"
+            name: "description"
+            widget: "text"
+          - label: "Изображение продукта"
+            name: "image"
+            widget: "image"
+          - label: "Спецификации"
+            name: "specs"
+            widget: "object"
+            fields:
+              - label: "Состав"
+                name: "Состав"
+                widget: "text"
+              - label: "Вес"
+                name: "Вес"
+                widget: "string"
+              - label: "Упаковка"
+                name: "Упаковка"
+                widget: "string"
+              - label: "Температура хранения"
+                name: "Температура хранения"
+                widget: "string"
+              - label: "Срок годности"
+                name: "Срок годности"
+                widget: "string"
+          - label: "Текст 'Где купить'"
+            name: "buy_text"
+            widget: "markdown"
+          - label: "Ссылка покупки"
+            name: "buy_link"
+            widget: "string"
+          - label: "Изображение 'Где купить'"
+            name: "buy_img"
+            widget: "image"
