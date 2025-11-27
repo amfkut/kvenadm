@@ -1,8 +1,8 @@
+# Static CMS — работает на GitHub Pages без прокси и Netlify
 backend:
   name: github
   repo: amfkut/kvenadm
   branch: main
-  # app_id: Ov23lir8C8cl1XXV24RQ
 
 media_folder: "products/images"
 public_folder: "/products/images"
@@ -28,21 +28,11 @@ collections:
             name: "specs"
             widget: "object"
             fields:
-              - label: "Состав"
-                name: "Состав"
-                widget: "text"
-              - label: "Вес"
-                name: "Вес"
-                widget: "string"
-              - label: "Упаковка"
-                name: "Упаковка"
-                widget: "string"
-              - label: "Температура хранения"
-                name: "Температура хранения"
-                widget: "string"
-              - label: "Срок годности"
-                name: "Срок годности"
-                widget: "string"
+              - { label: "Состав",              name: "Состав",              widget: "text" }
+              - { label: "Вес",                 name: "Вес",                 widget: "string" }
+              - { label: "Упаковка",            name: "Упаковка",            widget: "string" }
+              - { label: "Температура хранения",name: "Температура хранения",widget: "string" }
+              - { label: "Срок годности",       name: "Срок годности",       widget: "string" }
           - label: "Текст 'Где купить'"
             name: "buy_text"
             widget: "markdown"
